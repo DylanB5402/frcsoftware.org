@@ -1,5 +1,6 @@
 import remarkFrontmatter from 'remark-frontmatter';
 import remarkMdx from 'remark-mdx';
+import remarkGfm from 'remark-gfm';
 import remarkPresetLintRecommended from 'remark-preset-lint-recommended';
 import remarkNoInlineCodeFences from './src/plugins/remark-no-inline-code-fences.mjs';
 import remarkNoHtmlLinks from './src/plugins/remark-no-html-links.mjs';
@@ -9,6 +10,7 @@ export default {
     plugins: [
         remarkFrontmatter,
         remarkMdx,
+        remarkGfm,
         remarkPresetLintRecommended,
         remarkNoInlineCodeFences,
         remarkNoHtmlLinks,
