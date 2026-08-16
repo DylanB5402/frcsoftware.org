@@ -28,7 +28,8 @@ export default defineConfig({
         }),
         remarkRehype: {
             footnoteLabel: 'References',
-            // Default is `{ className: ['sr-only'] }`, which hides the heading.
+            footnoteLabelTagName: 'h4',
+            // override properties so footnote label is visible
             footnoteLabelProperties: {},
         },
     },
