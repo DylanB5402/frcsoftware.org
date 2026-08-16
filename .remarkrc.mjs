@@ -5,6 +5,7 @@ import remarkPresetLintRecommended from 'remark-preset-lint-recommended';
 import remarkNoInlineCodeFences from './src/plugins/remark-no-inline-code-fences.mjs';
 import remarkNoHtmlLinks from './src/plugins/remark-no-html-links.mjs';
 import remarkLintNoDeadUrls from 'remark-lint-no-dead-urls';
+import remarkLintNoLiteralUrls from 'remark-lint-no-literal-urls';
 
 export default {
     plugins: [
@@ -12,6 +13,7 @@ export default {
         remarkMdx,
         remarkGfm,
         remarkPresetLintRecommended,
+        [remarkLintNoLiteralUrls, false],
         remarkNoInlineCodeFences,
         remarkNoHtmlLinks,
         [
