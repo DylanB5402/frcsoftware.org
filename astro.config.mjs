@@ -26,6 +26,11 @@ export default defineConfig({
                 remarkCodeRegion,
             ],
         }),
+        remarkRehype: {
+            footnoteLabel: 'References',
+            // Default is `{ className: ['sr-only'] }`, which hides the heading.
+            footnoteLabelProperties: {},
+        },
     },
 
     integrations: [
