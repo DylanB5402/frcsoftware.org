@@ -47,8 +47,7 @@ class CommandBasedKitbot {
   private final ExampleMotor motor = new ExampleMotor();
 
   // [feederSim]
-  private final SingleFlywheelSim sim =
-      new SingleFlywheelSim(motor, "Feeder"); // Create a flywheel simulation
+  private final SingleFlywheelSim sim = SingleFlywheelSim.forFeeder(motor);
 
   public void periodic() { // Update the simulation
     if (RobotBase.isSimulation()) {
@@ -70,7 +69,11 @@ class CommandBasedKitbot {
   }
 
   class SingleFlywheelSim {
-    SingleFlywheelSim(ExampleMotor motor, String name) {}
+    static SingleFlywheelSim forFeeder(ExampleMotor motor) {
+      return new SingleFlywheelSim(motor);
+    }
+
+    SingleFlywheelSim(ExampleMotor motor) {}
 
     void periodic() {}
   }
