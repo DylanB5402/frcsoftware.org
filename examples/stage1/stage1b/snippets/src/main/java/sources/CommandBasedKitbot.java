@@ -68,7 +68,7 @@ class CommandBasedKitbot {
     ExampleMechanism feeder = new ExampleMechanism();
   }
 
-  class SingleFlywheelSim {
+  static class SingleFlywheelSim {
     static SingleFlywheelSim forFeeder(ExampleMotor motor) {
       return new SingleFlywheelSim(motor);
     }
